@@ -1,0 +1,126 @@
+extraEnvVars:
+  # TODO: secret
+  # - name: OPENAI_API_KEY
+  #   value: 0p3n-w3bu!
+  - name: WEBUI_AUTH
+    value: "false"
+  - name: WEBUI_SECRET_KEY
+    value: ""
+# image:
+#   pullPolicy: IfNotPresent
+#   repository: ghcr.io/open-webui/open-webui
+ollama:
+  enabled: false
+pipelines:
+  enabled: true
+replicaCount: 1
+service:
+  annotations:
+    tailscale.com/expose: "true"
+  containerPort: 8080
+  port: 80
+  type: LoadBalancer
+
+# COMPUTED VALUES:
+# affinity: {}
+# annotations: {}
+# clusterDomain: cluster.local
+# containerSecurityContext: {}
+# extraEnvVars:
+# - name: OPENAI_API_KEY
+#   value: 0p3n-w3bu!
+# - name: WEBUI_AUTH
+#   value: "false"
+# - name: WEBUI_SECRET_KEY
+#   value: ""
+# image:
+#   pullPolicy: IfNotPresent
+#   repository: ghcr.io/open-webui/open-webui
+#   tag: ""
+# imagePullSecrets: []
+# ingress:
+#   annotations: {}
+#   class: ""
+#   enabled: false
+#   existingSecret: ""
+#   host: ""
+#   tls: false
+# nameOverride: ""
+# nodeSelector: {}
+# ollama:
+#   enabled: false
+#   fullnameOverride: open-webui-ollama
+# ollamaUrls: []
+# openaiBaseApiUrl: ""
+# persistence:
+#   accessModes:
+#   - ReadWriteOnce
+#   annotations: {}
+#   enabled: true
+#   existingClaim: ""
+#   selector: {}
+#   size: 2Gi
+#   storageClass: ""
+#   subPath: ""
+# pipelines:
+#   affinity: {}
+#   annotations: {}
+#   clusterDomain: cluster.local
+# enabled: true
+#   extraEnvVars: []
+#   global: {}
+#   image:
+#     pullPolicy: Always
+#     repository: ghcr.io/open-webui/pipelines
+#     tag: main
+#   imagePullSecrets: []
+#   ingress:
+#     annotations: {}
+#     class: ""
+#     enabled: true
+#     existingSecret: ""
+#     host: ""
+#     tls: false
+#   nameOverride: ""
+#   nodeSelector: {}
+#   persistence:
+#     accessModes:
+#     - ReadWriteOnce
+#     annotations: {}
+#     enabled: true
+#     existingClaim: ""
+#     selector: {}
+#     size: 2Gi
+#     storageClass: ""
+#   podAnnotations: {}
+#   replicaCount: 1
+#   resources: {}
+#   service:
+#     annotations: {}
+#     containerPort: 9099
+#     labels: {}
+#     loadBalancerClass: ""
+#     nodePort: ""
+#     port: 9099
+#     type: ClusterIP
+#   tolerations: []
+# podAnnotations: {}
+# podSecurityContext: {}
+# replicaCount: 1
+# resources: {}
+# service:
+#   annotations: {}
+#   containerPort: 8080
+#   labels: {}
+#   loadBalancerClass: ""
+#   nodePort: ""
+#   port: 3004
+#   type: LoadBalancer
+# tika:
+#   enabled: false
+# tolerations: []
+# topologySpreadConstraints: []
+# volumeMounts:
+#   container: []
+#   initContainer: []
+# volumes: []

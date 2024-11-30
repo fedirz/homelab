@@ -1,0 +1,13 @@
+grafana.ini:
+  auth:
+    disable_login_form: true
+  auth.anonymous:
+    enabled: true
+    org_role: Admin
+service:
+  annotations:
+    tailscale.com/expose: "true"
+  enabled: true
+  port: 80
+  targetPort: 3000
+  type: LoadBalancer
